@@ -6,12 +6,11 @@ import binascii
 import os
 import re
 #美化版本  20191128
-num='AAAAAAAAAA'
-print(num)
-num2= re.sub(r"(?<=\w)(?=(?:\w\w)+$)", " ", num)
-print(num2)
 
 # from tkinter.filedialog import asksaveasfile
+
+# testnum = '123123123123123123123123123123123123123'
+# print(testnum.split(' ', 3 ))
 
 
 def insert_txt():
@@ -112,7 +111,7 @@ tk.Label(window, text='search function(please insert key word. ex:s00)', font=('
 inputblock = tk.Entry(window, show = None)
 inputblock.place(x=5, y=50, anchor='nw')
 
-result_label =tk.Label(window, bg= 'white',text='00　01 CC',font=('Monofonto',9)).place(x=1, y=115, anchor='nw')
+result_label =tk.Label(window, bg= 'white',text='00   01   02   03   04   05   06   07   08   09   0A  0B   0C  0D  0E   0F',font=('Monofonto',9)).place(x=1.5, y=120, anchor='nw')
 openfile_illustrate_label =tk.Label(window, text='打開指定檔並顯示前五行').place(x=65, y=3, anchor='nw')
 # text_block = tk.Text(window, height=5)   #陽春版視窗
 text_block = scrolledtext.ScrolledText(window,width=47,height=20,wrap=tk.WORD)#wrap=tk.WORD  滾動條文件視窗
@@ -127,7 +126,7 @@ save_button =tk.Button(window, text='save', command= savefunction).place(x=95, y
 quit_button = tk.Button(window, text='退出', command=quit)
 quit_button.pack(side=tk.BOTTOM)
 
-
+# 全形空格"　"
 
 window.mainloop()
 #函式放上面
@@ -148,3 +147,8 @@ window.mainloop()
 #             fout.write(
 #                 binascii.unhexlify(''.join(line.split()))
 #             )     #f為可任意更改變數
+# 數字自動間隔
+# num='AAAAAAAAAA'
+# print(num)
+# num2= re.sub(r"(?<=\w)(?=(?:\w\w)+$)", " ", num)
+# print(num2)
